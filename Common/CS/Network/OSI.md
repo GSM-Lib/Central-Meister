@@ -6,16 +6,35 @@
 
 OSI는 총 7계층이 존재합니다
 
+### OSI 개념
+
+* OSI는 개방형 시스템 상호 연결 모델의 표준입니다
+
+* 실제 인터넷에서 사용되는 TCP/IP 는 OSI 참조 모델을 기반으로 상업적이고 실무적으로 이용될 수 있도록 단순화한 것입니다
+
+### OSI 탄생배경
+
+* 초기 여러 정보 통신 업체 장비들은 자신의 업체 장비들끼리만 연결이 되어 호환성이 없었음
+* 모든 시스템들의 상호 연결에 있어 문제없도록 표준을 정한것이 OSI 7계층
+* 표준(호환성)과 학습도구에 의미로 제작
+
 ### OSI 7계층
 
 OSI 7계층은 프로토콜을 기능별로 나눈 것 입니다
+
+#### 작동원리
+1. OSI 7계층은 응용, 표현, 세션, 전송, 네트워크, 데이터링크, 물리계층으로 나뉩니다
+2. 전송 시 7계층에서 1계층으로 각각의 층마다 인식할 수 있어야 하는 헤더를 붙입니다(캡슐화)
+3. 수신 시 1계층에서 7계층으로 헤더를 떼어냅니다(디캡슐화)
+4. 출발지에서 데이터가 전송될 때 헤더가 추가되는데 2계층에서만 오류제어를 위해 꼬리부분에 추가됩니다
+5. 물리계층에서 1, 0 의 신호가 되어 전송매체 (동축케이블, 광섬유 등)을 통해 전송합니다
 
 각 계층은 `하위 계층의 기능만 이용`하고, `상위 계층에게 기능을 제공`합니다
 
 일반적으로 `하위 계층`들은 **하드웨어**로 `상위 계층`들은 **소프트웨어**로 구현합니다
 
-![image](https://user-images.githubusercontent.com/81547954/169839005-c6f87872-d155-49ec-afbe-ca925c78ad07.png)
-> 출처: https://www.cloudflare.com/ko-kr/learning/ddos/glossary/open-systems-interconnection-model-osi/
+![image](https://velog.velcdn.com/images/cgotjh/post/52907c8c-c149-4943-ad21-3996f44f912f/995EFF355B74179035.jpg)
+> 출처: https://shlee0882.tistory.com/110
 
 그러면 첫번째 1계층(물리 계층)부터 알아보겠습니다
 
@@ -102,4 +121,4 @@ OSI 7계층은 프로토콜을 기능별로 나눈 것 입니다
 * 서비스 제공
 * 프토로콜: DHCP, DNS, FTP, HTTP
 
-### 참고: http://www.incodom.kr/OSI
+### 참고: http://www.incodom.kr/OSI, https://velog.io/@cgotjh/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-OSI-7-%EA%B3%84%EC%B8%B5-OSI-7-LAYER-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90-%EA%B0%81-%EA%B3%84%EC%B8%B5-%EC%84%A4%EB%AA%85
