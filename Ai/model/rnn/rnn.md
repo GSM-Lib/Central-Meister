@@ -2,7 +2,7 @@
 Recurrent Neural Network
 <hr>
 
-<<<<<<< HEAD
+
 > 이전 출력도 입력으로 받는 FC layer
 <hr>
 여러 한계점이 많지만 분명히 한떄 자연어처리에서 유용하게 쓰였던 rnn.
