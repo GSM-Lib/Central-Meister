@@ -24,7 +24,7 @@ $x$는 입력, $w$는 학습될 가중치, $h_{t-1}$는 이전 레이어의 출�
 
 # Gradient vanishing
 문장의 감정분석, 생성등 nlp task를 진행할때 감정 분석은 rnn맨 마지막 레이어의 출력을 generator에 보내주고 생성에서는 똑같이 rnn으로 이루어진 encoder의 맨 마지막출력을 decoder로 보내주는 식으로 진행되므로 마지막 레이어의 출력이 얼마나 해당 문장들의 정보를 잘 담고 있냐가 중요한데,
-torch에서 쓰이는 rnn의 activation 함수인 tanh만 봐도 미분했을때 그래프가 아래와 같은데
+torch에서 쓰이는 rnn의 default activation 함수인 tanh만 봐도 미분했을때 그래프가 아래와 같은데
 <img src="img/tanhDerivation.png">
 보면 출력값이 전부 1이하이다.
 
