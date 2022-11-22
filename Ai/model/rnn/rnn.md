@@ -35,4 +35,7 @@ torch에서 쓰이는 rnn의 default activation 함수인 tanh만 봐도 미분�
 
 따라서 loss함수가 뱉은 loss가 backpropagation을 거듭하면 거듭할수록 점점 작아지면서 0에 수렴하게 된다.
 
+그러면 문장의 머리 부분, 예시로 "학습이 잘 안되는 문제 발생" 이라는 문장을 들자면
+"학습" 부분의 정보는
+
 이를 해결하기 위해 나온것이 LSTM이다.
