@@ -26,16 +26,18 @@ $x$는 입력, $w$는 학습될 가중치, $h_{t-1}$는 이전 레이어의 출�
 
 이러한 출력을 다음 레이어로 넘기는 특성때문에 생기는 문제가 있는데 바로 gradient vanishing이다.
 
-# Gradient vanishing
+# long-term dependencies
+<img width="1581" alt="Screenshot 2022-11-23 at 11 32 10 PM" src="https://user-images.githubusercontent.com/81360154/203572766-4d0501ad-e610-450c-875e-1d00bc0e75de.png">
+
 문장의 감정분석, 생성등 nlp task를 진행할때 감정 분석은 rnn맨 마지막 레이어의 출력을 generator에 보내주고 생성에서는 똑같이 rnn으로 이루어진 encoder의 맨 마지막출력을 decoder로 보내주는 식으로 진행되므로 마지막 레이어의 출력이 얼마나 해당 문장들의 정보를 잘 담고 있냐가 중요한데,
-torch에서 쓰이는 rnn의 default activation 함수인 tanh만 봐도 미분했을때 그래프가 아래와 같은데
+torch에서 쓰이는 rnn의 default activation 함수인 tanh를 보시면 아래와 같은데
 
-![tanhDerivation](https://user-images.githubusercontent.com/81360154/202978926-a12e154e-73e7-48a0-952e-dfaa8af18d17.png)
-보면 출력값이 전부 1이하이다.
+![tanh](https://user-images.githubusercontent.com/81360154/203571705-af8da3fe-4bed-456e-b549-105479f2a585.png)
 
-따라서 loss함수가 뱉은 loss가 backpropagation을 거듭하면 거듭할수록 점점 작아지면서 0에 수렴하게 된다.
+사진에서 보이듯이 tanh의 치역은 (-1,1)이죠.
 
-그러면 문장의 머리 부분, 예시로 "학습이 잘 안되는 문제 발생" 이라는 문장을 들자면
-"학습" 부분의 정보는
+따라서 문장의 머리 부분, 예시로 "학습이 잘 안되는 문제 발생" 이라는 문장을 들자면
+"학습" 부분의 정보는 encoder 마지막 hidden state에 거의 담겨 있지 않은 것 이죠. 위의 예시문장은 그나마 짧아서 다행이지
+만약, 입력 문장이 현재 이글의 전부 라면 맨위 "RNN"의 정보는 거의 0에 수렴하겟죠.
 
-이를 해결하기 위해 나온것이 LSTM이다.
+이를 해결 하기 위해 나온 것이 LSTM이다.
