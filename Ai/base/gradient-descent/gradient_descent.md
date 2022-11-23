@@ -1,7 +1,7 @@
 # Gradient Descent
 <hr>
 
-> 인공지능 == 미분
+> 인공지능이 학습하는 
 <hr>
 
 deep learning의 가장 근간이 되는 gradient descent에 대해 알아보자
