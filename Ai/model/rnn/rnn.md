@@ -16,6 +16,14 @@ Recurrent Neural Network
 이제 거기에 이전 레이어의 출력을 입력으로 받는 식입니다.
 
 보통 rnn을 설명하는 글에서 사진을 아래 좌항(folded)과 우항(unfolded)으로 자주하는데 개인적으로 우항이 좀더 이해하는데 편한거 같습니다.
+하지만 헷갈리면 안될 것 우항의 각 타임스텝에서의 레이어들의 weight는 전부 같습니다.(shared weights)
+
+여기서 나는 어? 레이어마다 가중치가 다 다르면 성능이 더 좋게 나오지 않을까? 라고 생각했지만 shared weights를 사용하는 이유를 찾아보니
+1. 문장이 다른 문장들에 대해 좀더 general한 성능을 뽑기위해
+2. "On Monday it was snowing","It was snowing on Monday" 두 문장은 같은 문장인데 각 타임스텝마다 weight가 다르면 다른 출력을 뽑기때문
+
+이라고 한다 ref=https://stats.stackexchange.com/questions/221513/why-are-the-weights-of-rnn-lstm-networks-shared-across-time
+
 
 ![rnn](https://user-images.githubusercontent.com/81360154/202978913-10f6b4d8-88ab-430c-9c91-ed695d080e4e.png)
 그래서 우항의 사진으로 설명하자면 첫번째 A레이어에서 나오는 출력이 각각 출력층과 다음 A레이어로 들어가는데 둘이 같은 값입니다.
