@@ -15,9 +15,7 @@ $e^x\displaystyle{\lim_{h \to 0}} \frac{e^h-1}{h}$
 
 $e^x\displaystyle{\lim_{t \to 0}} \frac{t}{\log_et+1}$
 
-$e^x\displaystyle{\lim_{t \to 0}} \frac{\frac{1}{\log_et+1}}{t}$
-
-$e^x\displaystyle{\lim_{t \to 0}} \frac{1}{(\log_et+1) \times \frac{1}{t}}$
+$e^x\displaystyle{\lim_{t \to 0}} \frac{t \times \frac{1}{t}}{(\log_et+1) \times \frac{1}{t}}$
 
 $e^x\displaystyle{\lim_{t \to 0}} \frac{1}{\log_e(t+1)^ \frac{1}{t}}$
 
