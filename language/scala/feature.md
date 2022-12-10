@@ -14,7 +14,7 @@
 
 ### JVML
 <hr>
-java, kotlin 등과 같이 bytecode로 컴파일 되는 java virtual machine langue이다
+java, kotlin 등과 같이 bytecode로 컴파일 되는 java virtual machine language이다
 
 
 ### Immutable
