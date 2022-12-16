@@ -47,7 +47,7 @@ trait JobManager extends Manager {
   }
 }
 
-// extends Manager가 빠져있다면 즉, Manager 클래스를 상속하지 않았다면 컴파일 에러가 발생한다.
+// Manager가 아닌 이외의 클래스를 상속할 경우 컴파일 에러가 난다
 class ManagerImpl extends Manager with TaskManager with JobManager {
 
   override def lookup(): Unit = {
