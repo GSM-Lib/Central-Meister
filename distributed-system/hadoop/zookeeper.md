@@ -45,6 +45,7 @@ znode의 권한은 일반적인 유닉스 계열의 os에서 사용하는 rwx와
 ### stat
 <hr>
 zxid는 주키퍼의 transaction id로 znode에는 아래와 같은 상태 변화 정보가 기록된다.
+zxid는 sequence node라서 b의 zxid가 a의 zxid작다면 b의 transaction이 더 빨리 일어난것이다.
 
 - czxid : znode를 생성한 트랜잭션의 id
 - mzxid : znode를 마지막으로 수정 트랜잭션의 id
