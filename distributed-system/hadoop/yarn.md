@@ -1,4 +1,4 @@
-# Hadoop
+# yarn (Yet Another Resouce Negotiator)
 
 Hadoop은 분산처리를 위한 오픈소스 프레임워크이다.<br>
 분산처리 컴퓨터 여러대를 클러스터화 하여 데이터를 병렬적으로 처리하는 것이다.<br>
