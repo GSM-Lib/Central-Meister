@@ -3,7 +3,7 @@
 e에 대해 공부했다면 $e^x$는 미분해도 $e^x$라는 걸 들어 봤을거다.
 이를 증명해보겟다.
 
-$y=e^x &rarr; \frac{\partial y}{\partial x}=e^x$
+$y=e^x \rightarrow \frac{\partial y}{\partial x}=e^x$
 
 $\displaystyle{\lim_{h \to 0}} \frac{e^{x+h}-e^x}{h}$
 
