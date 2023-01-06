@@ -23,4 +23,4 @@ def merge(left,right):
     
     return sorted_list 
 
-print(merge_sort([100, 76,1, 2,2,85, 93, 98,100]))
+
