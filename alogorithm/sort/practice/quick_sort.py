@@ -20,6 +20,6 @@ def quick_sort(order, left, right):
     quick_sort(order, pi + 1, right)
 
 
-data = [3,523,45,234,652,3]
-quick_sort(data)
+data = [3253425,3,523,45,234,652,3]
+quick_sort(data,0,len(data)-1)
 print(data)
