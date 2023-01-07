@@ -12,11 +12,14 @@ def partition(order, left, right):
   return i + 1
 
 
-def quickSort(order, left, right):
+def quick_sort(order, left, right):
   if left < right:
     pi = partition(order, left, right)
 
-    quickSort(order, left, pi - 1)
-    quickSort(order, pi + 1, right)
+    quick_sort(order, left, pi - 1)
+    quick_sort(order, pi + 1, right)
 
 
+data = [3,523,45,234,652,3]
+quick_sort(data)
+print(data)
