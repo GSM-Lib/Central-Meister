@@ -1,3 +1,3 @@
 # RSA
 
-https://dev-matician.tistory.com/manage/posts/
+https://dev-matician.tistory.com/18
